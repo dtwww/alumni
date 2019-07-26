@@ -1,0 +1,36 @@
+<view class="container">
+
+
+  <view class="title">
+    <text>{{detail.name}}</text>
+  </view>
+
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="3000" circular="{{true}}">
+    <block wx:for="{{swiperImgs}}">
+      <swiper-item>
+        <image class="swiper-img" src="{{item}}" mode="scaleToFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="header_out">
+    <view class="header">
+      <text>介绍</text>
+    </view>
+  </view>
+
+  <view class="introduce">
+    <text>{{detail.detail}}</text>
+  </view>
+
+  <view class="header_out">
+    <view class="header">
+      <text>联系方式</text>
+    </view>
+  </view>
+
+  <view class="contact">
+    <text>{{detail.contact}}</text>
+  </view>
+
+</view>

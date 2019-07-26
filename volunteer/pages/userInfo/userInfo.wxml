@@ -1,0 +1,109 @@
+<view class="container">
+
+
+  <view class="head-view">
+    <text class="head">—— 详细信息 ——</text>
+  </view>
+
+  <view class="line-view">
+    <view class="line"></view>
+  </view>
+
+  <view class="content">
+    <view class="name-view">
+      <text class="text1">姓名：</text>
+      <text class="text2">{{userDetail.name}}</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="sex-view">
+      <text class="text1">性别：</text>
+      <text class="text2">{{userDetail.sex}}</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="country-view ">
+      <text class="text1">入学年份：</text>
+      <text class="text2">{{userDetail.enrolmentYear}}</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="province-view ">
+      <text class="text1">专业：</text>
+      <text class="text2">{{userDetail.department}}</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="city-view">
+      <text class="text1">班级：</text>
+      <text class="text2">{{userDetail.classNumber}}</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="phone-view">
+      <text class="text1">联系方式：</text>
+      <text class="text2">{{userDetail.contact}}</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+  </view>
+
+  <view class="head-view">
+    <text class="head">—— 创建的活动 ——</text>
+  </view>
+
+  <view class="line-view">
+    <view class="line"></view>
+  </view>
+
+  <view class="piece" wx:for="{{userCreateArray}}">
+    <view class="one">
+      <text>{{item.name}}</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+  </view>
+
+  <view class="head-view">
+    <text class="head">—— 加入的活动 ——</text>
+  </view>
+
+  <view class="line-view">
+    <view class="line"></view>
+  </view>
+
+  <view class="piece" wx:for="{{nameArray}}">
+    <view class="one">
+      <text>{{item}}</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+  </view>
+
+    <view class="head-view">
+    <text class="head">—— 捐款活动 ——</text>
+  </view>
+
+  <view class="line-view">
+    <view class="line"></view>
+  </view>
+
+  <view class="piece" wx:for="{{userDonationArray}}">
+    <view class="one">
+      <text>{{item.donation_detail.name}}</text>
+      <text>{{item.money}}</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+  </view>
+
+</view>

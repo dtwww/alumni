@@ -1,0 +1,19 @@
+<view class="piece" wx:for="{{verifiedActivityArray}}">
+  <view class="one" bindlongtap='delete' data-id='{{item.id}}'>
+    <text>{{item.name}}</text>
+    <text class="text2" bindtap='activityDetail' data-id='{{item.id}}'>详情 ></text>
+  </view>
+  <view class="line-view">
+    <view class="line"></view>
+  </view>
+</view>
+
+<view class="modal-mask" wx:if="{{showDeleteModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showDeleteModal}}">
+    <view class="modal-title">提示</view>
+    <view class="modal-content">确认删除该活动？</view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="yesDelete">是</view>
+      <view class="btn-cancel" bindtap="noDelete">否</view>
+    </view>
+  </view>

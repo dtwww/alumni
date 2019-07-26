@@ -1,0 +1,141 @@
+<view class="container">
+
+  <view class="activity-type">
+    <text class="text">活动类型: </text>
+    <radio-group class="activity-type-options">
+      <label wx:for="{{activityTypeOptions}}">
+        <radio value="{{item.name}}" disabled='true' checked="{{item.name === activityType}}" />{{item.display}}
+      </label>
+    </radio-group>
+  </view>
+  <view class="header_out">
+    <view class="header">
+      <text>基本信息</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="name-view">
+      <text class="text">活动名称：</text>
+      <label>{{name}}</label>
+    </view>
+    <view class="people-view">
+      <text class="text">活动人数：</text>
+      <label>{{people}}</label>
+    </view>
+    <picker value="{{index}}" disabled='true' range="{{enrolmentOptions}}" range-key='year'>
+      <view class="enrolment-view">
+        <text class="text enrolment-title">入学年份：</text>
+        <text class="text enrolment-options">{{enrolment.year || ''}}</text>
+      </view>
+    </picker>
+    <picker value="{{index}}" disabled='true' range="{{enrolment ? enrolment.departments : []}}" range-key='name'>
+      <view class="enrolment-view">
+        <text class="text enrolment-title">院系：</text>
+        <text class="text enrolment-options">{{department.name || ''}}</text>
+      </view>
+    </picker>
+    <picker value="{{index}}" disabled='true' range="{{department ? department.classes : []}}">
+      <view class="enrolment-view">
+        <text class="text enrolment-title">班级：</text>
+        <text class="text enrolment-options">{{classNumber || ''}}</text>
+      </view>
+    </picker>
+  </view>
+
+  <view class="header_out">
+    <view class="header">
+      <text>宾馆</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="hotel-view">
+      <text class="text">宾馆名称：</text>
+      <!-- <text bindtap='hotelChoose'>></text> -->
+      <label>{{hotelName}}</label>
+    </view>
+    <view class="hotel-people-view">
+      <text class="text">居住人数：</text>
+      <label>{{hotelPeople}}</label>
+    </view>
+    <view class="hotel-day-view">
+      <text class="text">居住天数：</text>
+      <label>{{hotelDay}}</label>
+    </view>
+  </view>
+
+  <view class="header_out">
+    <view class="header">
+      <text>活动</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="activity-model-view">
+      <text class="text">活动名称：</text>
+      <!-- <text bindtap='activityChoose'>></text> -->
+      <label>{{activityModelName}}</label>
+    </view>
+    <view class="activity-view">
+      <view class="input-view">
+        <label>{{time1}}</label>
+        <label>{{activity1}}</label>
+      </view>
+      <view class="input-view">
+        <label>{{time2}}</label>
+        <label>{{activity2}}</label>
+      </view>
+      <view class="input-view">
+        <label>{{time3}}</label>
+        <label>{{activity3}}</label>
+      </view>
+    </view>
+  </view>
+
+  <view class="header_out">
+    <view class="header">
+      <text>其他</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="photo-view">
+      <text class="text">摄影需求：</text>
+      <!-- <text bindtap='photoChoose'>></text> -->
+      <label>{{photoName}}</label>
+    </view>
+    <view class="souvenir-view">
+      <view class="one">
+        <text class="text">纪念品需求：</text>
+        <!-- <text class="right" bindtap='souvenirChoose'>></text> -->
+      </view>
+      <view class="souvenir-list" wx:for='{{souvenirNameAmountArray}}'>
+        <label>{{item.name}}</label><label>{{item.amount}}</label>
+      </view>
+    </view>
+    <view class="else-view">
+      <text class="text">其他需求：</text>
+      <textarea cursor-spacing='100' value='{{elseNeed}}' disabled='true'></textarea>
+    </view>
+  </view>
+
+  <view class="button" wx:if="{{type=='join'}}">
+    <button bindtap='join'>加入活动</button>
+  </view>
+
+    <view class="modal-mask" wx:if="{{showJoinActivityModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showJoinActivityModal}}">
+    <view class="input-modal-title">请输入活动密码</view>
+    <view class="input-modal-content">
+      <view class="modal-input">
+        <input type="digit" maxlength="10" bindinput="inputChange" class="input" focus='{{true}}'></input>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="yesInput">确定</view>
+      <view class="btn-cancel" bindtap="noInput">取消</view>
+    </view>
+  </view>
+
+</view>

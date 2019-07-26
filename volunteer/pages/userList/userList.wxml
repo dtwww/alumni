@@ -1,0 +1,22 @@
+<view class="container">
+
+
+  <view class="head-view">
+    <text class="head">—— 用户名单 ——</text>
+  </view>
+
+  <view class="line-view">
+    <view class="line"></view>
+  </view>
+
+  <view class="piece" wx:for="{{userArray}}">
+    <view class="one" bindtap='userDetail' data-nickname='{{item.nickname}}'>
+      <text>{{item.nickname}}</text>
+      <text class="text2">{{item.name}}</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,10 @@
+<view>
+  <button type="default" bindtap="unverifiedActivityList">未审核活动</button>
+  <image src='../../images/icons/tip.png' wx:if='{{hasUnverifiedActivity}}'></image>
+</view>
+<view>
+  <button type="default" bindtap="verifiedActivityList">已审核活动</button>
+</view>
+<view>
+  <button type="default" bindtap="donationList">捐款活动</button>
+</view>

@@ -1,0 +1,46 @@
+<view class="container">
+
+
+  <view class="title">
+    <text>{{detail.name}}</text>
+  </view>
+
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="3000" circular="{{true}}">
+    <block wx:for="{{swiperImgs}}">
+      <swiper-item>
+        <image class="swiper-img" src="{{item}}" mode="scaleToFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="header_out">
+    <view class="header">
+      <text>介绍</text>
+    </view>
+  </view>
+
+  <view class="introduce">
+    <text>{{detail.detail}}</text>
+  </view>
+
+  <!-- <view class="header_out">
+    <view class="header">
+      <text>房间类型及价钱</text>
+    </view>
+  </view>
+
+  <view class="type-money">
+    <text>{{detail.typeMoney}}</text>
+  </view> -->
+
+  <view class="header_out">
+    <view class="header">
+      <text>地址</text>
+    </view>
+  </view>
+
+  <view class="address">
+    <text>{{detail.address}}</text>
+  </view>
+
+</view>

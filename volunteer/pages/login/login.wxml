@@ -1,0 +1,19 @@
+<view class="container">
+
+
+  <text class="head">志愿者登录</text>
+
+  <view class="content">
+    <text class="text">用户名：</text>
+    <input focus='{{true}}' bindinput='usernameChange'></input>
+  </view>
+
+  <view class="content">
+    <text class="text">密码：</text>
+    <input password='{{true}}' maxlength='12' bindinput='passwordChange'></input>
+  </view>
+
+  <button bindtap='login'>登录</button>
+
+
+</view>

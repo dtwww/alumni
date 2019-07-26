@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: upload
+Version: 0.1.1
+Summary: 文档分享程序
+Home-page: https://gitlab.com/jacksao/upload
+Author: jacksao
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: qiniu
+
+一键分享程序
+
+

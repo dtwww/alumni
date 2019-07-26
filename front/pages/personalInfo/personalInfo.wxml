@@ -1,0 +1,70 @@
+<view class="container">
+  <view class='header'>
+    <view class='header-img'>
+      <image src='{{userInfo.avatarUrl}}'></image>
+    </view>
+    <text class='nickname'>{{userInfo.nickName}}</text>
+  </view>
+
+  <view class="content">
+    <view class="item-view">
+      <text class="text1">姓名：</text>
+      <text class="text2" wx:if="{{!isEditing}}">{{name || ''}}</text>
+      <input value='{{name}}' focus='{{true}}' bindinput='onNameChange' wx:else></input>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="item-view">
+      <text class="text1">性别：</text>
+      <!-- <text class="text2" wx:if="{{!isEditing}}">{{sex || ''}}</text> -->
+      <text class="text2">{{sex || ''}}</text>
+      <!-- <input value='{{sex}}' focus='{{true}}' bindinput='onSexChange' wx:else></input> -->
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <picker bindchange="onSelectEnrolmentYear" disabled='{{!isEditing}}' value="{{index}}" range="{{enrolmentOptions}}" range-key='year'>
+      <view class="item-view">
+        <text class="text1">入学年份：</text>
+        <text class="text2">{{enrolment.year}}</text>
+      </view>
+    </picker>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <picker bindchange="onSelectDepartment" disabled='{{!isEditing}}' value="{{index}}" range="{{enrolment ? enrolment.departments : []}}" range-key='name'>
+      <view class="item-view">
+        <text class="text1">院系：</text>
+        <text class="text2">{{department ? department.name : ''}}</text>
+      </view>
+    </picker>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    
+    <picker bindchange="onSelectClass" disabled='{{!isEditing}}' value="{{index}}" range="{{department ? department.classes : []}}">
+      <view class="item-view">
+        <text class="text1">班级：</text>
+        <text class="text2">{{classNumber || ''}}</text>
+      </view>
+    </picker>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="item-view">
+      <text class="text1">联系方式：</text>
+      <text class="text2" wx:if="{{!isEditing}}">{{contact || ''}}</text>
+      <input value='{{contact}}' focus='{{true}}' bindinput='onContactChange' wx:else></input>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <button class="edit-button" bindtap='onPressEdit' wx:if="{{!isEditing}}">修改</button>
+    <view class="button-group" wx:else>
+      <button class="cancel-button" bindtap='onPressCancel'>取消</button>
+      <button class="submit-button" bindtap='onPressSave'>保存</button>
+    </view>
+  </view>
+
+</view>

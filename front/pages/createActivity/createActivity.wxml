@@ -1,0 +1,128 @@
+<view class="container">
+  <view class="activity-type">
+    <text class="text">活动类型: </text>
+    <radio-group class="activity-type-options" bindchange="onActivityTypeChange">
+      <label wx:for="{{activityTypeOptions}}">
+        <radio value="{{item.name}}" checked="{{item.name === activityType}}" />{{item.display}}
+      </label>
+    </radio-group>
+  </view>
+  <view class="header_out">
+    <view class="header">
+      <text>基本信息</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="name-view">
+      <text class="text">活动名称：</text>
+      <input bindinput='nameInput' maxlength='14'></input>
+    </view>
+    <view class="people-view">
+      <text class="text">活动人数：</text>
+      <input bindinput='peopleInput' type='number'></input>
+    </view>
+    <picker bindchange="onSelectEnrolmentYear" value="{{index}}" range="{{enrolmentOptions}}" range-key='year'>
+      <view class="enrolment-view">
+        <text class="text enrolment-title">入学年份：</text>
+        <text class="text enrolment-options">{{enrolment.year || ''}}</text>
+      </view>
+    </picker>
+    <picker bindchange="onSelectDepartment" value="{{index}}" range="{{enrolment ? enrolment.departments : []}}" range-key='name'>
+      <view class="enrolment-view">
+        <text class="text enrolment-title">院系：</text>
+        <text class="text enrolment-options">{{department.name || ''}}</text>
+      </view>
+    </picker>
+    <picker bindchange="onSelectClassNumber" value="{{index}}" range="{{department ? department.classes : []}}">
+      <view class="enrolment-view">
+        <text class="text enrolment-title">班级：</text>
+        <text class="text enrolment-options">{{classNumber || ''}}</text>
+      </view>
+    </picker>
+  </view>
+
+  <view class="header_out">
+    <view class="header">
+      <text>宾馆</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="hotel-view">
+      <text class="text">宾馆选择：</text>
+      <text bindtap='hotelChoose'>></text>
+      <label>{{hotelName}}</label>
+    </view>
+    <view class="hotel-people-view">
+      <text class="text">居住人数：</text>
+      <input bindinput='hotelPeopleInput' type='number'></input>
+    </view>
+    <view class="hotel-day-view">
+      <text class="text">居住天数：</text>
+      <input bindinput='hotelDayInput' type='number'></input>
+    </view>
+  </view>
+
+  <view class="header_out">
+    <view class="header">
+      <text>活动</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="activity-model-view">
+      <text class="text">活动选择：</text>
+      <text bindtap='activityChoose'>></text>
+      <label>{{activityModelName}}</label>
+    </view>
+    <view class="activity-view">
+      <view class="input-view">
+        <input bindinput='timeInput1' value='{{time1}}'></input>
+        <input bindinput='activityInput1' value='{{activity1}}'></input>
+      </view>
+      <view class="input-view">
+        <input bindinput='timeInput2' value='{{time2}}'></input>
+        <input bindinput='activityInput2' value='{{activity2}}'></input>
+      </view>
+      <view class="input-view">
+        <input bindinput='timeInput3' value='{{time3}}'></input>
+        <input bindinput='activityInput3' value='{{activity3}}'></input>
+      </view>
+    </view>
+  </view>
+
+  <view class="header_out">
+    <view class="header">
+      <text>其他</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="photo-view">
+      <text class="text">摄影需求：</text>
+      <text bindtap='photoChoose'>></text>
+      <label>{{photoName}}</label>
+    </view>
+    <view class="souvenir-view">
+      <view class="one">
+        <text class="text">纪念品需求：</text>
+        <text class="right" bindtap='souvenirChoose'>></text>
+      </view>
+      <view class="souvenir-list" wx:for='{{souvenirNameAmountArray}}'>
+        <label>{{item.name}}</label>
+        <label>{{item.amount}}</label>
+      </view>
+    </view>
+    <view class="else-view">
+      <text class="text">其他需求：</text>
+      <textarea cursor-spacing='100' bindinput='elseInput'></textarea>
+    </view>
+  </view>
+
+  <view class="button">
+    <!-- <button bindtap='save'>保存</button> -->
+    <button bindtap='publish'>发布</button>
+  </view>
+
+</view>

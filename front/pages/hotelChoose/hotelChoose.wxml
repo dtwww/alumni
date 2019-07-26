@@ -1,0 +1,29 @@
+<view class="container">
+
+  <view class="content-view">
+    <radio-group class="radio-group" bindchange="radioChange">
+      <view class="content">
+        <view class="content-item" wx:for="{{hotelArray}}">
+          <view class="not-radio">
+            <view class="item-img-view">
+              <image class="item-img" src="{{item.picture1}}" mode="scaleToFill"></image>
+            </view>
+            <view class="item-text-view">
+              <text>{{item.name}}</text>
+              <view class="item-text2-view">
+                <text bindtap='hotelDetail' data-info="{{info}}" data-id="{{item.id}}">详情 ></text>
+              </view>
+            </view>
+            <view class="line"></view>
+          </view>
+          <view class="radio">
+            <radio value="{{item.id}}" />
+          </view>
+        </view>
+      </view>
+    </radio-group>
+  </view>
+
+  <button bindtap='yes' type='primary'>确定</button>
+
+</view>

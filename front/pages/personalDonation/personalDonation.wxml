@@ -1,0 +1,13 @@
+<view class="container">
+
+  <view class="piece" wx:for="{{donationArray}}" data-id='{{item.id}}' data-index='{{index}}'>
+    <view class="one">
+      <text>{{item.donation_detail.name}}</text>
+      <text class="text2">{{item.money}}<text>元</text></text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+  </view>
+
+</view>

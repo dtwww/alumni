@@ -1,0 +1,25 @@
+<!-- <view class="container">
+  <view class="activity-list">
+    <view class="activity-item" wx:for="{{activities}}" bindtap='onActivityPress' data-id="{{activity.id}}" wx:for-item="activity">
+      <text>{{activity.name}}</text>
+    </view>
+  </view>
+</view> -->
+
+<view class="container">
+
+  <view class="line-view">
+    <view class="line"></view>
+  </view>
+
+  <view class="piece" wx:for="{{findArray}}" data-id='{{item.id}}' data-index='{{index}}'>
+    <view class="one">
+      <text>{{item.name}}</text>
+      <text bindtap='detail' data-id='{{item.id}}'>详情 ></text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,117 @@
+.header {
+  height: 300rpx;
+  width: 100%;
+  background-color: #07C160;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 7%;
+}
+
+.header-img {
+  border: 5rpx solid #07C160;
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-left: 20%;
+}
+
+.header-img image {
+  height: 100%;
+  width: 100%;
+}
+
+.nickname {
+  margin-right: 25%;
+  color: white;
+  font-size: 45rpx;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100rpx;
+}
+
+.item-view {
+  display: flex;
+  font-size: 35rpx;
+  padding: 30rpx 0 30rpx 40rpx;
+  align-items: center;
+}
+/* 
+.name-view, .id-view, .phone-view {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  font-size: 35rpx;
+  padding: 30rpx 0 30rpx 40rpx;
+  margin: 20rpx 0 15rpx 0;
+  align-items: center;
+}
+
+.sex-view, .enrolment-year-view, .department-view, .class-view {
+  width: 90%;
+  font-size: 35rpx;
+  padding: 30rpx 0 30rpx 40rpx;
+  margin: 20rpx 0 15rpx 0;
+} */
+
+.text1 {
+  margin-right: 20rpx;
+}
+
+.text2 {
+  color: #5b5b5b;
+}
+
+/* .name-view input {
+  margin-left: 14%;
+}
+
+.sex-view .text2, .enrolment-year-view .text2, .department-view .text2, .class-view .text2 {
+  margin-left: 17%;
+}
+
+.id-view .text2 {
+  margin-left: -7%;
+}
+
+.phone-view .text2 {
+  margin-left: -26%;
+} */
+
+.edit {
+  color: gray;
+  font-size: 25rpx;
+}
+
+.save {
+  color: #07C160;
+  font-size: 25rpx;
+}
+
+.line {
+  width: 94%;
+  height: 5rpx;
+  background-color: #d6d6d6;
+}
+
+.line-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.edit-button, .cancel-button, .submit-button {
+  font-size: 35rpx;
+  width: 40%;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.button-group {
+  display: flex;
+}

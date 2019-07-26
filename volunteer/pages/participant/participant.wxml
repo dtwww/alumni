@@ -1,0 +1,44 @@
+<view class="container">
+
+
+  <view class="head-view">
+    <text class="head">—— 创建者 ——</text>
+  </view>
+
+  <view class="line-view">
+    <view class="line"></view>
+  </view>
+
+  <view class="piece" bindlongpress='unpublishedLongPress' data-id='{{item.id}}' data-index='{{index}}'>
+    <view class="one">
+      <text>{{createNickname}}</text>
+      <text>{{createName}}</text>
+      <!-- <text data-id='{{item.id}}'>详情 ></text> -->
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+  </view>
+
+  <view class="head-view">
+    <text class="head">—— 参与者 ——</text>
+  </view>
+
+  <view class="line-view">
+    <view class="line"></view>
+  </view>
+
+  <view class="piece" wx:for="{{joinArray}}" bindlongpress='publishedLongPress' data-id='{{item.id}}' data-index='{{index}}'>
+    <!-- <view class="one" wx:if="{{item.deleted==0}}"> -->
+    <view class="one">
+      <text>{{item.nickname}}</text>
+      <text>{{item.name}}</text>
+      <!-- <text data-id='{{item.id}}'>详情 ></text> -->
+    </view>
+    <!-- <view class="line-view" wx:if="{{item.deleted==0}}"> -->
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+  </view>
+
+</view>

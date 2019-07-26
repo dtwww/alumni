@@ -1,0 +1,80 @@
+<view class="container">
+
+
+  <view class="head-view">
+    <text class="head">—— 未审核 ——</text>
+  </view>
+
+  <view class="line-view">
+    <view class="line"></view>
+  </view>
+
+  <view class="piece" wx:for="{{unverifiedArray}}" bindlongpress='unverifiedLongPress' data-id='{{item.id}}' data-index='{{index}}'>
+    <!-- <view class="one" wx:if="{{item.deleted==0}}"> -->
+    <view class="one">
+      <text>{{item.name}}</text>
+      <text>{{item.id}}</text>
+      <text bindtap='unverifiedDetail' data-id='{{item.id}}'>详情 ></text>
+    </view>
+    <!-- <view class="line-view" wx:if="{{item.deleted==0}}"> -->
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+  </view>
+
+  <view class="head-view">
+    <text class="head">—— 已审核 ——</text>
+  </view>
+
+  <view class="line-view">
+    <view class="line"></view>
+  </view>
+
+  <view class="piece" wx:for="{{verifiedArray}}" bindlongpress='verifiedLongPress' data-id='{{item.id}}' data-index='{{index}}'>
+    <!-- <view class="one" wx:if="{{item.deleted==0}}"> -->
+    <view class="one">
+      <text>{{item.name}}</text>
+      <text>{{item.id}}</text>
+      <text bindtap='verifiedDetail' data-id='{{item.id}}'>详情 ></text>
+      <!-- <view wx:if="{{buttonArray[index]}}" data-id='{{item.id}}' class="button-view" bindtap='cancelJoin' data-idinfo='{{item.volunteer_detail.id}}' data-index='{{index}}'>
+        <button>取消</button>
+      </view> -->
+    </view>
+    <!-- <view class="line-view" wx:if="{{item.deleted==0}}"> -->
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+  </view>
+
+  <!-- <view class="modal-mask" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">提示</view>
+    <view class="modal-content">是否取消？</view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="yes">是</view>
+      <view class="btn-cancel" bindtap="no">否</view>
+    </view>
+  </view>
+
+  <view class="modal-mask" wx:if="{{showDonationDeleteModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showDonationDeleteModal}}">
+    <view class="modal-title">提示</view>
+    <view class="modal-content">确认删除该条捐款记录？</view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="yesDonationDelete">是</view>
+      <view class="btn-cancel" bindtap="noDonationDelete">否</view>
+    </view>
+  </view>
+
+    <view class="modal-mask" wx:if="{{showVolunteerDeleteModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showVolunteerDeleteModal}}">
+    <view class="modal-title">提示</view>
+    <view class="modal-content">确认删除该条志愿者记录？</view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="yesVolunteerDelete">是</view>
+      <view class="btn-cancel" bindtap="noVolunteerDelete">否</view>
+    </view>
+  </view> -->
+
+
+</view>

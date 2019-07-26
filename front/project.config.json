@@ -1,0 +1,101 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.94",
+	"appid": "wx11aaec65a1ed5833",
+	"projectname": "front",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 8,
+			"list": [
+				{
+					"id": -1,
+					"name": "home",
+					"pathName": "pages/home/home",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "personal",
+					"pathName": "pages/personal/personal",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "personalInfo",
+					"pathName": "pages/personalInfo/personalInfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "createActivity",
+					"pathName": "pages/createActivity/createActivity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "hotelChoose",
+					"pathName": "pages/hotelChoose/hotelChoose",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "activityChoose",
+					"pathName": "pages/activityChoose/activityChoose",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "souvenirChoose",
+					"pathName": "pages/souvenirChoose/souvenirChoose",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "wanderList",
+					"pathName": "pages/wanderList/wanderList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "buildDetail",
+					"pathName": "pages/buildDetail/buildDetail",
+					"scene": null
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,44 @@
+<view class="container">
+
+  <view class="content-view">
+    <radio-group class="radio-group" bindchange="radioChange">
+      <view class="content">
+        <view class="content-item" wx:for="{{activityModelArray}}">
+          <view class="not-radio">
+
+            <view class="header_out">
+              <view class="header">
+                <text>{{item.name}}</text>
+              </view>
+            </view>
+
+            <view class="item-content">
+              <view class="item-content-one">
+                <text class="dot">· </text>
+                <text class="time">{{item.time1}}</text>
+                <text class="activity">{{item.activity1}}</text>
+              </view>
+              <view class="item-content-one">
+                <text class="dot">· </text>
+                <text class="time">{{item.time2}}</text>
+                <text class="activity">{{item.activity2}}</text>
+              </view>
+              <view class="item-content-one">
+                <text class="dot">· </text>
+                <text class="time">{{item.time3}}</text>
+                <text class="activity">{{item.activity3}}</text>
+              </view>
+            </view>
+
+          </view>
+          <view class="radio">
+            <radio value="{{item.id}}" />
+          </view>
+        </view>
+      </view>
+    </radio-group>
+  </view>
+
+  <button bindtap='yes' type='primary'>确定</button>
+
+</view>

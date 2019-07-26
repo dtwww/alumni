@@ -1,0 +1,96 @@
+.container {
+  margin-bottom: 100rpx;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.name-view, .sex-view, .country-view, .province-view, .city-view, .id-view,
+.phone-view, .credit-view, .priority-view {
+  width: 90%;
+  font-size: 35rpx;
+  padding: 30rpx 0 30rpx 40rpx;
+  margin: 20rpx 0 15rpx 0;
+}
+
+.text2 {
+  color: #5b5b5b;
+}
+
+.name-view .text2, .sex-view .text2, .country-view .text2, .province-view .text2,
+.city-view .text2 {
+  margin-left: 17%;
+}
+
+.id-view .text2, .phone-view .text2 {
+  margin-left: 6%;
+}
+
+.credit-view .text2 {
+  margin-left: 11%;
+}
+
+.priority-view .text2 {
+  margin-left: 11%;
+}
+
+.line {
+  width: 94%;
+  height: 5rpx;
+  background-color: #d6d6d6;
+}
+
+.line-view {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.head-view {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.head {
+  margin: 60rpx 0 60rpx 0;
+  text-align: center;
+  align-self: center;
+  color: #07C160;
+  font-size: 45rpx;
+}
+
+.piece {
+  width: 100%;
+  height: 100%;
+}
+
+.one {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 35rpx;
+  padding: 30rpx 40rpx 30rpx 40rpx;
+  margin: 20rpx 0 15rpx 0;
+  align-items: center;
+  color: #5b5b5b;
+}
+
+.button-view .canceled {
+  color: #07C160;
+  font-size: 30rpx;
+}
+
+.button-view .exam {
+  color: #07C160;
+  font-size: 30rpx;
+}
+
+.button-view .status {
+  color: #07C160;
+  font-size: 30rpx;
+}

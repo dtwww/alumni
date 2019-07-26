@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/user/user",
+    "pages/verifiedActivityList/verifiedActivityList",
+    "pages/unverifiedActivityList/unverifiedActivityList",
+    "pages/verifiedActivityDetail/verifiedActivityDetail",
+    "pages/unverifiedActivityDetail/unverifiedActivityDetail",
+    "pages/hotelChoose/hotelChoose",
+    "pages/hotelDetail/hotelDetail",
+    "pages/activityModelChoose/activityModelChoose",
+    "pages/photoChoose/photoChoose",
+    "pages/photoDetail/photoDetail",
+    "pages/souvenirChoose/souvenirChoose",
+    "pages/participant/participant",
+    "pages/userList/userList",
+    "pages/userInfo/userInfo",
+    "pages/donationList/donationList",
+    "pages/donationDetail/donationDetail",
+    "pages/userDonationDetail/userDonationDetail",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#07C160",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+    "tabBar": {
+      "selectedColor": "#07C160",
+      "list": [
+        {
+          "pagePath": "pages/home/home",
+          "text": "返校活动",
+          "iconPath": "images/icons/activity_unselected.png",
+          "selectedIconPath": "images/icons/activity_selected.png"
+        },
+        {
+          "pagePath": "pages/user/user",
+          "text": "用户信息",
+          "iconPath": "images/icons/personal_unselected.png",
+          "selectedIconPath": "images/icons/personal_selected.png"
+        }
+      ]
+    },
+  "sitemapLocation": "sitemap.json"
+}

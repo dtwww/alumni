@@ -1,0 +1,35 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="3000" circular="{{true}}">
+    <block wx:for="{{swiperImgs}}">
+      <swiper-item>
+        <image class="swiper-img" src="{{item}}" mode="scaleToFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="content">
+    <button type="default" bindtap="wander">随便逛逛</button>
+    <button type="default" bindtap="createActivity">创建活动</button>
+    <button type="default" bindtap="joinActivity">加入活动</button>
+    <button type="default" bindtap="showActivities">与我相关</button>
+    <button type="default" bindtap="donation">我要捐款</button>
+    <button type="default" bindtap="call">联系我们</button>
+  </view>
+
+  <view class="modal-mask" wx:if="{{showJoinActivityModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showJoinActivityModal}}">
+    <view class="input-modal-title">请输入活动密码</view>
+    <view class="input-modal-content">
+      <view class="modal-input">
+        <input type="digit" maxlength="10" bindinput="inputChange" class="input" focus='{{true}}'></input>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="yesInput">确定</view>
+      <view class="btn-cancel" bindtap="noInput">取消</view>
+    </view>
+  </view>
+
+</view>

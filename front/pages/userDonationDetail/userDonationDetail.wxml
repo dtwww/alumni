@@ -1,0 +1,22 @@
+<view class="container">
+
+
+  <view class="head-view">
+    <text class="head">—— 捐款名单 ——</text>
+  </view>
+
+  <view class="line-view">
+    <view class="line"></view>
+  </view>
+
+  <view class="piece" wx:for="{{array}}">
+    <view class="one">
+      <text>{{item.name}}</text>
+      <text class="text2">{{item.money}}<text>元</text></text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+  </view>
+
+</view>

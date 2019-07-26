@@ -1,0 +1,101 @@
+<view class="container">
+
+
+  <!-- <view class="head-view">
+    <text class="head">—— 捐款类 ——</text>
+  </view> -->
+
+  <view class="search">
+    <input placeholder="请输入关键字" bindinput="inputChange"></input>
+    <icon class="searchicon" size='20' type='search'></icon>
+  </view>
+
+  <view class="sort-view">
+    <view class="sort">
+      <text class="sort_market" style="color:{{marketColor}}; background-color:{{marketBgColor}}" bindtap='sortMarket'>超市</text>
+      <text class="sort_study" style="color:{{studyColor}}; background-color:{{studyBgColor}}" bindtap='sortStudy'>自习室</text>
+      <text class="sort_apartment" style="color:{{apartmentColor}}; background-color:{{apartmentBgColor}}" bindtap='sortApartment'>公寓</text>
+    </view>
+  </view>
+
+  <view class="content-view" wx:if="{{inputSearch == null}}">
+    <view class="content-view">
+      <view class="content" wx:if="{{isMarket}}">
+        <view class="content-item" wx:for="{{marketArray}}" bindtap='buildDetail' data-info="{{info}}" data-id="{{item.id}}">
+          <view class="item-img-view">
+            <image class="item-img" src="{{item.picture1}}" mode="scaleToFill"></image>
+          </view>
+          <view class="item-text-view">
+            <text>{{item.name}}</text>
+          </view>
+          <view class="line"></view>
+        </view>
+      </view>
+
+      <view class="content" wx:elif="{{isStudy}}">
+        <view class="content-item" wx:for="{{studyArray}}" bindtap='buildDetail' data-info="{{info}}" data-id="{{item.id}}">
+          <view class="item-img-view">
+            <image class="item-img" src="{{item.picture1}}" mode="scaleToFill"></image>
+          </view>
+          <view class="item-text-view">
+            <text>{{item.name}}</text>
+          </view>
+          <view class="line"></view>
+        </view>
+      </view>
+
+      <view class="content" wx:else>
+        <view class="content-item" wx:for="{{apartmentArray}}" bindtap='buildDetail' data-info="{{info}}" data-id="{{item.id}}">
+          <view class="item-img-view">
+            <image class="item-img" src="{{item.picture1}}" mode="scaleToFill"></image>
+          </view>
+          <view class="item-text-view">
+            <text>{{item.name}}</text>
+          </view>
+          <view class="line"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="content-view" wx:else>
+    <view class="content-view">
+      <view class="content" wx:if="{{isMarket}}">
+        <view class="content-item" wx:for="{{searchMarketArray}}" bindtap='buildDetail' data-info="{{info}}" data-id="{{item.id}}">
+          <view class="item-img-view">
+            <image class="item-img" src="{{item.picture1}}" mode="scaleToFill"></image>
+          </view>
+          <view class="item-text-view">
+            <text>{{item.name}}</text>
+          </view>
+          <view class="line"></view>
+        </view>
+      </view>
+
+      <view class="content" wx:elif="{{isStudy}}">
+        <view class="content-item" wx:for="{{searchStudyArray}}" bindtap='buildDetail' data-info="{{info}}" data-id="{{item.id}}">
+          <view class="item-img-view">
+            <image class="item-img" src="{{item.picture1}}" mode="scaleToFill"></image>
+          </view>
+          <view class="item-text-view">
+            <text>{{item.name}}</text>
+          </view>
+          <view class="line"></view>
+        </view>
+      </view>
+
+      <view class="content" wx:else>
+        <view class="content-item" wx:for="{{searchApartmentArray}}" bindtap='buildDetail' data-info="{{info}}" data-id="{{item.id}}">
+          <view class="item-img-view">
+            <image class="item-img" src="{{item.picture1}}" mode="scaleToFill"></image>
+          </view>
+          <view class="item-text-view">
+            <text>{{item.name}}</text>
+          </view>
+          <view class="line"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

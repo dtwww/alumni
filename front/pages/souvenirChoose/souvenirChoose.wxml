@@ -1,0 +1,30 @@
+<view class="container">
+
+  <view class="content-view">
+    <!-- <checkbox-group class="checkbox-group" bindchange="checkboxChange"> -->
+      <view class="content">
+        <view class="content-item" wx:for="{{souvenirArray}}">
+          <view class="not-checkbox">
+            <view class="item-img-view">
+              <image class="item-img" src="{{item.picture}}" mode="scaleToFill"></image>
+            </view>
+            <view class="item-text-view">
+              <text>{{item.name}}</text>
+              <!-- <view class="item-text2-view">
+                <text bindtap='hotelDetail' data-info="{{info}}" data-id="{{item.id}}">详情 ></text>
+              </view> -->
+              <input placeholder='请输入数量' bindinput='souvenirAmount' data-id='{{item.id}}'></input>
+            </view>
+            <view class="line"></view>
+          </view>
+          <!-- <view class="checkbox">
+            <checkbox value="{{item.id}}" />
+          </view> -->
+        </view>
+      </view>
+    <!-- </checkbox-group> -->
+  </view>
+
+  <button bindtap='yes' type='primary'>确定</button>
+
+</view>

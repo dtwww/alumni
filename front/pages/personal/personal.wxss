@@ -1,0 +1,85 @@
+.header {
+  height: 300rpx;
+  width: 100%;
+  background-color: #07C160;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 7%;
+}
+
+.header-img {
+  border: 5rpx solid #07C160;
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-left: 20%;
+}
+
+.header-img image {
+  height: 100%;
+  width: 100%;
+}
+
+.nickname {
+  margin-right: 25%;
+  color: white;
+  font-size: 45rpx;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.personal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 35rpx;
+  padding: 30rpx 40rpx 30rpx 40rpx;
+  margin: 20rpx 0 15rpx 0;
+  align-items: center;
+  color: #5b5b5b;
+}
+
+.text2 {
+  font-weight: 600;
+}
+
+.line-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.line {
+  width: 94%;
+  height: 5rpx;
+  background-color: #d6d6d6;
+}
+
+.right {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* .tip {
+  width: 50rpx;
+  height: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 30rpx;
+}
+
+.tip image {
+  width: 50rpx;
+  height: 50rpx;
+} */

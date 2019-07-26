@@ -1,0 +1,17 @@
+view {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50rpx;
+}
+
+button {
+  width: 70%;
+  margin-left: 110rpx;
+}
+
+image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 40rpx;
+  margin-top: 20rpx;
+}

@@ -1,0 +1,42 @@
+<view class="container">
+
+
+  <view class='header'>
+    <view class='header-img'>
+      <image src='{{userInfo.avatarUrl}}'></image>
+    </view>
+    <text class='nickname'>{{userInfo.nickName}}</text>
+  </view>
+
+  <view class="content">
+    <view class="personal" bindtap='personalInfo'>
+      <text>个人信息</text>
+      <text class="text2">></text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="personal" bindtap='personalCreate'>
+      <text>我创建的</text>
+      <text class="text2">></text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="personal" bindtap='personalJoin'>
+      <text>我加入的</text>
+      <text class="text2">></text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="personal" bindtap='personalDonation'>
+      <text>捐款活动</text>
+      <text class="text2">></text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+  </view>
+
+</view>

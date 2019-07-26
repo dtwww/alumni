@@ -1,0 +1,244 @@
+.header_out {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 35rpx;
+  font-weight: bold;
+  padding: 10rpx 40rpx 10rpx 40rpx;
+  border-left: 6rpx #07C160 solid;
+  margin: 20rpx 0 15rpx 0;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.activity-type, .name-view, .people-view, .major-view, .graduate-view, .hotel-view, .hotel-people-view,
+.hotel-day-view, .activity-model-view, .photo-view, .enrolment-view{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  font-size: 35rpx;
+  padding: 20rpx 0 20rpx 40rpx;
+  margin: 15rpx 0 10rpx 0;
+  align-items: center;
+}
+
+.activity-type {
+  margin-left: 45rpx;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.activity-type-options {
+  margin-left: 50rpx;
+}
+
+.enrolment-view {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.enrolment-title {
+  flex-basis: 30%;
+}
+.enrolment-options {
+  border-bottom: solid 1rpx;
+  flex-grow: 1;
+}
+
+.souvenir-view {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  width: 90%;
+  font-size: 35rpx;
+  padding: 20rpx 0 20rpx 40rpx;
+  margin: 15rpx 0 10rpx 0;
+  align-items: center;
+}
+
+.souvenir-view label {
+  font-size: 35rpx;
+  padding: 20rpx 0 10rpx 10rpx;
+  margin: 15rpx 0 0 0;
+  align-items: center;
+}
+
+.one {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* justify-content: space-between; */
+}
+
+.right {
+  margin-left: 45rpx;
+}
+
+.souvenir-list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.activity-view {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 35rpx;
+  align-items: center;
+}
+
+.input-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 85%;
+}
+
+.else-view {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 35rpx;
+  align-items: center;
+  /* margin-top: 37rpx; */
+  margin-top: 40rpx;
+}
+
+.name-view input, .people-view input, .major-view input, .graduate-view input,
+.hotel-people-view input, .hotel-day-view input {
+  width: 70%;
+  border-bottom: 2rpx solid gray;
+}
+
+.activity-view input {
+  width: 80%;
+  border-bottom: 2rpx solid gray;
+  padding: 20rpx 0 20rpx 40rpx;
+}
+
+label {
+  width: 60%;
+}
+
+.else-view text {
+  width: 90%;
+}
+
+textarea {
+  width: 80%;
+  margin-top: 50rpx;
+  height: 200rpx;
+  border: 2rpx solid gray;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: white;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+
+.input-modal-title {
+  padding-top: 50rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-title {
+  padding-top: 25rpx;
+  padding-bottom: 25rpx;
+  font-size: 36rpx;
+  color: white;
+  text-align: center;
+  background-color: #07C160;
+}
+
+.input-modal-content {
+  padding: 50rpx 32rpx;
+}
+
+.modal-content {
+  padding-top: 80rpx;
+  padding-bottom: 80rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+
+.input {
+  width: 100%;
+  height: 82rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #07C160;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+}

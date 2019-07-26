@@ -1,0 +1,3 @@
+[console_scripts]
+upload = upload.main:cli
+

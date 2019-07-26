@@ -1,0 +1,106 @@
+<view class="container">
+
+
+  <view class="title">
+    <text>{{detail.name}}</text>
+  </view>
+
+  <!-- <view class="something-else">
+    <text>地点：<text>{{detail.address}}</text></text>
+    <text>截止时间：<text>{{normalDate}}</text></text>
+  </view> -->
+
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="3000" circular="{{true}}">
+    <block wx:for="{{swiperImgs}}">
+      <swiper-item>
+        <image class="swiper-img" src="{{item}}" mode="scaleToFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="header_out">
+    <view class="header">
+      <text>介绍</text>
+    </view>
+  </view>
+
+  <view class="introduce">
+    <text>{{detail.detail}}</text>
+  </view>
+
+  <view class="header_out">
+    <view class="header">
+      <text>地址</text>
+    </view>
+  </view>
+
+  <view class="address">
+    <text>{{detail.address}}</text>
+  </view>
+
+  <map id="map" longitude="121.58" latitude="37.25" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location="true"></map>
+
+  <!-- <view class="sum">
+    <text wx:if="{{info=='donation'}}">已捐款<text class="text2">{{detail.money}}</text>元</text>
+    <text wx:else>已报名<text class="text2">{{detail.people}}</text>人</text>
+    <text wx:if="{{info=='donation'}}" class="detail" bindtap='userDonationDetail' data-id='{{id}}'>查看捐款详情>></text>
+    <text wx:else class="detail" bindtap='userVolunteerDetail' data-id='{{id}}'>查看志愿者详情>></text>
+  </view> -->
+
+  <!-- <view class="interested">
+    <text>对此活动感兴趣？您可以：</text>
+  </view>
+
+  <view class="operation">
+    <view class="operation">
+      <button bindtap='call' wx:if="{{info=='donation'}}">我要捐款</button>
+      <button bindtap='join' wx:else>报名参加</button>
+      <button open-type="share">转发给好友</button>
+    </view>
+  </view>
+
+  <view class="modal-mask" wx:if="{{showConfirmModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showConfirmModal}}">
+    <view class="modal-title">提示</view>
+    <view class="modal-content">确认报名？</view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="yesConfirm">确定</view>
+      <view class="btn-cancel" bindtap="noConfirm">取消</view>
+    </view>
+  </view>
+
+  <view class="modal-mask" wx:if="{{showIncompleteModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showIncompleteModal}}">
+    <view class="modal-title">提示</view>
+    <view class="modal-content">请您完善个人信息</view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="goToComplete">去完善</view>
+      <view class="btn-cancel" bindtap="noComplete">取消</view>
+    </view>
+  </view>
+
+  <view class="modal-mask" wx:if="{{showJoinedModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showJoinedModal}}">
+    <view class="modal-title">提示</view>
+    <view class="modal-content">您已报名该活动</view>
+    <view class="modal-footer">
+      <view class="joined-btn-confirm" bindtap="joined">确定</view>
+    </view>
+  </view>
+
+  <view class="modal-mask" wx:if="{{showInputModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showInputModal}}">
+    <view class="input-modal-title">请输入捐款钱数</view>
+    <view class="input-modal-content">
+      <view class="modal-input">
+        <input type="digit" maxlength="10" bindinput="inputChange" class="input" focus='{{true}}'></input>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="yesInput">确定</view>
+      <view class="btn-cancel" bindtap="noInput">取消</view>
+    </view>
+  </view> -->
+
+
+</view>

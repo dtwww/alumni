@@ -1,0 +1,25 @@
+<view class="container">
+
+
+  <view class="title">
+    <text>{{detail.name}}</text>
+  </view>
+
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="3000" circular="{{true}}">
+    <block wx:for="{{swiperImgs}}">
+      <swiper-item>
+        <image class="swiper-img" src="{{item}}" mode="scaleToFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="introduce">
+    <text>{{detail.detail}}</text>
+  </view>
+
+  <view class="sum">
+    <text>已捐款<text class="text2">{{detail.money}}</text>元，其中志愿者团队收到<text class="text2">{{detail.volunteer_money}}</text>元</text>
+    <text class="detail" bindtap='userDonationDetail' data-id='{{id}}'>查看捐款详情>></text>
+  </view>
+
+</view>

@@ -1,0 +1,39 @@
+.container {
+  height: 1000rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.head {
+  text-align: center;
+  width: 60%;
+  font-size: 50rpx;
+  margin-bottom: 20rpx;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30rpx;
+  margin-right: 100rpx;
+}
+
+.text {
+  width: 200rpx;
+  text-align: center;
+}
+
+input {
+  border: 1px solid #07C160;
+  padding: 10rpx;
+}
+
+button {
+  color: white;
+  background-color: #07C160;
+  margin-top: 40rpx;
+}

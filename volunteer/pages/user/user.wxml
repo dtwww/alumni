@@ -1,0 +1,23 @@
+<view class="container">
+
+
+  <view class="head-view">
+    <text class="head">—— 用户信息 ——</text>
+  </view>
+
+  <view class="line-view">
+    <view class="line"></view>
+  </view>
+
+  <view class="content">
+    <view class="piece" bindtap='userInfo'>
+      <text>用户名单</text>
+      <text class="text2">></text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+  </view>
+
+
+</view>

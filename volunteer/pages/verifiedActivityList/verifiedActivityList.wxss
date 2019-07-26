@@ -1,0 +1,96 @@
+.piece {
+  width: 100%;
+  height: 100%;
+}
+
+.one {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 35rpx;
+  padding: 30rpx 40rpx 30rpx 40rpx;
+  margin: 20rpx 0 15rpx 0;
+  align-items: center;
+  color: #5b5b5b;
+}
+
+.one .text2 {
+  margin-right: 80rpx;
+}
+
+.line-view {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.line {
+  width: 94%;
+  height: 5rpx;
+  background-color: #d6d6d6;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: white;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+
+.modal-title {
+  padding-top: 25rpx;
+  padding-bottom: 25rpx;
+  font-size: 36rpx;
+  color: white;
+  text-align: center;
+  background-color: #07C160;
+}
+
+.modal-content {
+  padding-top: 80rpx;
+  padding-bottom: 80rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #07C160;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+}
